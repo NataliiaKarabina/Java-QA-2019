@@ -6,8 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int size = 7;
         Books books = new Books(size);
-        //ID, String title, String author, String publishingHouse,
-        // String yearOfPublishing, int numberOfPages, double cost
+
         Book[] source = {
                 new Book(1, "To Kill a Mockingbird", "Harper Lee", "Arrow Books", 2012, 309, 238),
                 new Book(2, "1984", "George Orwell", "Caro", 2016, 384, 257),
