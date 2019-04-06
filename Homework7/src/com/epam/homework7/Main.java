@@ -17,13 +17,21 @@ public class Main {
 
         };
         printFigures(figures);
+        System.out.println("---------------------Sort by area------------------------------------");
+        Arrays.sort(figures, new CompareShapeByArea());
+        printFigures(figures);
+        System.out.println("---------------------Sort by color-----------------------------------");
+        Arrays.sort(figures, new CompareShapeByColor());
+        printFigures(figures);
+        System.out.println("---------------------------------------------------------------------");
+
         System.out.println("The area of all figures = " + calculateAreaOfAllFigures(figures));
         System.out.println("The area of each figure type = " + Arrays.toString(calculateAreaOfFigureType(figures)));
     }
 
     public static void printFigures(Shape[] figures) {
         for (Shape elem : figures) {
-            System.out.println(elem.toString() + ";  area of figure is " + elem.calcArea());
+            elem.draw();
         }
     }
 

@@ -1,6 +1,6 @@
 package com.epam.homework7;
 
-public class Shape {
+public abstract class Shape implements Drawable {
 
     private String color;
 
@@ -23,11 +23,14 @@ public class Shape {
         return "class = " + this.getClass().getName() + ": color = " + this.color;
     }
 
-    public double calcArea() {
-        System.out.println("The area of the figure is not defined ");
-        return 0.0;
+    @Override
+    public void draw() {
+        System.out.println(this + " -> area = " + this.calcArea());
     }
+
+    public abstract double calcArea();
 }
+
 
 
 
